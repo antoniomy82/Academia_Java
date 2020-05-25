@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Usuario" table="usuarios">
+        <id name="id" type="int" column="id"/>
+        <property name="nif" column="nif" type="string"/>
+        <property name="nombre" column="nombre" type="string"/>
+        <property name="apellidos" column="apellidos" type="string"/>
+        <property name="movil" column="movil" type="string"/>
+        <property name="email" column="email" type="string"/>
+        <property name="fecha_nacimiento" column="fecha_nacimiento" type="string"/>
+        <property name="tipo" type="string" column="tipo"/>
+        <property name="nombre_usuario" type="string" column="nombre_usuario"/>
+        <property name="password" type="string" column="password"/>
+    </class>
+</hibernate-mapping>

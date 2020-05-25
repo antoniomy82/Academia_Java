@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Tutoria" table="tutorias">
+        <id name="id_tuto" type="int" column="id_tuto"/>
+        <property name="id_asignatura" column="id_asignatura" type="int"/>
+        <property name="nombre_asignatura" column="nombre_asignatura" type="string"/>
+        <property name="nif_profesor" column="nif_profesor" type="string"/>
+        <property name="nif_alumno" column="nif_alumno" type="string"/>
+        <property name="dia_tutoria" column="dia_tutoria" type="string"/>
+        <property name="mensaje" column="mensaje" type="string"/>
+        <property name="leido" type="int" column="leido"/>
+    </class>
+</hibernate-mapping>

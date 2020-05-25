@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Asignatura" table="asignaturas">
+        <id name="id_asignatura" type="int" column="id_asignatura"/>
+        <property name="nombre_asignatura" column="nombre_asignatura" type="string"/>
+        <property name="nif_profesor" column="nif_profesor" type="string"/>
+        <property name="dias_clases" column="dias_clases" type="string"/>
+        <property name="hora_inicioC" column="hora_inicioC" type="string"/>
+        <property name="hora_finC" column="hora_finC" type="string"/>
+        <property name="nif_alumno1" column="nif_alumno1" type="string"/>
+        <property name="nif_alumno2" column="nif_alumno2" type="string"/>
+        <property name="nif_alumno3" column="nif_alumno3" type="string"/>
+        <property name="nif_alumno4" column="nif_alumno4" type="string"/>
+        <property name="nif_alumno5" column="nif_alumno5" type="string"/>
+        <property name="dias_tutorias" column="dias_tutorias" type="string"/>
+        <property name="hora_inicioT" column="hora_inicioT" type="string"/>
+        <property name="hora_finT" column="hora_finT" type="string"/>
+    </class>
+</hibernate-mapping>

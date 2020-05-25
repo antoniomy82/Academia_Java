@@ -1,0 +1,126 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+    
+        <!-- Login  -->      
+        <action name="validar" class="PoolAction">
+            <result name="input">index.jsp</result>
+            <result name="login">menu_Admin.jsp</result>
+            <result name="success">menu_Profe.jsp</result>
+            <result name="none">menu_Alumn.jsp</result>
+        </action>    
+        
+        <!--@@@[BLOQUE - USUARIOS]@@@-->
+         
+        <!--Listado de Usuarios Completo [nombre_usuario + password] (Menú Admin)-->    
+        <action name="listadoUser" class="UserListActionB">
+            <result name="success">listado_usuarios.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>   
+        
+        <!-- Crear un usuario -->
+        <action name="user_crear" class="UsuarioAction_Crear">
+            <result name="success">usuario_Ok.jsp</result>
+            <result name="error">usuario_Crear.jsp</result>
+        </action>
+        
+        <!-- Borrar un usuario -->
+        <action name="user_borrar" class="UsuarioAction_Borrar">
+            <result name="success">menu_Admin.jsp</result>
+        </action>
+        
+        <!-- Buscar un usuario -->
+        <action name="user_search" class="UsuarioAction_Buscar">
+            <result name="success">usuario_Editar.jsp</result>
+            <result name="error">usuario_Buscar.jsp</result>
+        </action>
+        
+        <!-- Editar un usuario -->
+        <action name="user_edit" class="UsuarioAction_Editar">
+            <result name="success">menu_Admin.jsp</result>
+        </action>
+        
+        <!--@@@[BLOQUE - ASIGNATURAS]@@@-->
+        
+        <!-- Crear una asignatura -->
+        <action name="asig_crear" class="AsignaturaAction_Crear">
+            <result name="success">asignatura_Ok.jsp</result>
+            <result name="error">asignatura_Crear.jsp</result>
+        </action>
+        
+        <!--Listado de Asignaturas-->    
+        <action name="listadoAsig" class="AsigListAction">
+            <result name="success">listado_asignaturas.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>   
+        
+        <!-- Borrar una asignatura -->
+        <action name="asig_borrar" class="AsignaturaAction_Borrar">
+            <result name="success">menu_Admin.jsp</result>
+        </action>
+        
+        <!-- Buscar un usuario -->
+        <action name="asignatura_search" class="AsignaturaAction_Buscar">
+            <result name="success">asignatura_Editar.jsp</result>
+            <result name="error">asignatura_Buscar.jsp</result>
+        </action>
+        
+        <!-- Editar una asignatura -->
+        <action name="asig_edit" class="AsignaturaAction_Editar">
+            <result name="success">menu_Admin.jsp</result>
+        </action>   
+         
+        <!--@@@[BLOQUE - Tutorias]@@@-->
+    
+        <!--Listado de Clases en las que está matriculado un alumno-->    
+        <action name="list_mat" class="MatriListAction">
+            <result name="success">listado_matriculado.jsp</result>
+            <result name="error">menu_Alumn.jsp</result>
+        </action>  
+        
+        <!--Listado de tutorias que puede crear un alumno de las clases en las que está matriculado-->    
+        <action name="list_tuto" class="MatriListAction">
+            <result name="success">listado_tutoria.jsp</result>
+            <result name="error">menu_Alumn.jsp</result>
+        </action>  
+        
+        <!-- Crear una tutoria 1 de 2 -->
+        <action name="tutocrear" class="TutoriaAction_Get">
+            <result name="success">tutoria_Crear.jsp</result>
+            <result name="error">menu_Alumn.jsp</result>
+        </action>
+        
+        <!-- Crear una tutoria 2 de 2 -->
+        <action name="tutoguardar" class="TutoriaAction_Crear">
+            <result name="success">menu_Alumn.jsp</result>
+            <result name="error">tutoria_Crear.jsp</result>
+        </action>
+        
+        <!--Listado de tutorias de un alumno-->    
+        <action name="listmtuto" class="TutoriasListAction">
+            <result name="success">listado_mituto.jsp</result>
+            <result name="error">menu_Alumn.jsp</result>
+        </action>
+        
+        <!--Listado de tutorias de un Profesor-->    
+        <action name="listmtutoprofe" class="TutoriasListAction">
+            <result name="success">listado_mituto_profe.jsp</result>
+            <result name="error">menu_Profe.jsp</result>
+        </action>
+        
+        <!--Marcar como leida una solicitud de tutoría-->
+        <action name="tutoleido" class="TutoriaAction_Leido">
+            <result name="success">menu_Profe.jsp</result>
+        </action>
+        
+        <!--Listado de Clases/tutorias que un profesor que un profesor imparte-->    
+        <action name="list_tuto_profe" class="MatriListAction">
+            <result name="success">listado_tutoria_profe.jsp</result>
+            <result name="error">menu_Profe.jsp</result>
+        </action> 
+    </package>  
+</struts>
+

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+ 
+    <!--@@@[BLOQUE - USUARIOS]@@@-->  
+
+    <!-- Listado de usuarios registrados en la BBDD -->
+    <bean id="userDAO" class="UserListDAO"/>
+    <bean id="UserListActionB" class="UserListAction">
+        <property name="userDAO" ref="userDAO"/> 
+    </bean> 
+
+    <!-- Crear un Usuario-->
+    <bean id="dao" class="UsuarioDAO"/>
+    <bean id="UsuarioAction_Crear" class="UserAction_Crear">
+        <property name="dao" ref="dao"/> 
+    </bean>
+    
+    <!--Borrar un Usuario-->
+    <bean id="UsuarioAction_Borrar" class="UserAction_Borrar">    
+        <property name="dao" ref="dao"/>
+    </bean>   
+    
+    <!--Buscar un Usuario-->
+    <bean id="user" class="Usuario"/>
+    <bean id="UsuarioAction_Buscar" class="UserAction_Buscar">    
+        <property name="user" ref="user"/>
+    </bean>  
+    
+    <!--Editar un Usuario-->
+    <bean id="UsuarioAction_Editar" class="UserAction_Editar">   
+        <property name="dao" ref="dao"/>
+    </bean>   
+
+    <!--@@@[BLOQUE - ASIGNATURAS]@@@-->  
+
+    <!--Crear una asignatura-->   
+    <bean id="adao" class="AsignaturasDAO"/>
+    <bean id="asignaturaAction_Crear" class="AsignaturaAction_Crear">
+        <property name="adao" ref="adao"/>
+    </bean>
+    
+    <!-- Listado de Asignaturas registrados en la BBDD -->
+    <bean id="asigDAO" class="AsigListDAO"/>
+    <bean id="AsigListAction" class="AsigListAction">
+        <property name="asigDAO" ref="asigDAO"/> 
+    </bean>
+    
+    <!--Borrar una Asignatura-->
+    <bean id="AsignaturaAction_Borrar" class="AsignaturaAction_Borrar">    
+        <property name="adao" ref="adao"/>
+    </bean>   
+    
+    <!--Buscar una Asignatura-->
+    <bean id="asig" class="Asignatura"/>
+    <bean id="AsignaturaAction_Buscar" class="AsignaturaAction_Buscar">    
+        <property name="asig" ref="asig"/>
+    </bean>
+    
+    <!--Editar una Asignatura-->
+    <bean id="AsignaturaAction_Editar" class="AsignaturaAction_Editar">   
+        <property name="adao" ref="adao"/>
+    </bean>       
+    
+    <!--@@@[BLOQUE - TUTORIAS]@@@-->     
+  
+ 
+    <!-- Listado de asignaturas en las que está matriculado un alumno-->
+    <bean id="ml" class="MatriList"/>
+    <bean id="MatriListAction" class="MatriListAction">
+        <property name="ml" ref="ml"/>
+    </bean>
+    
+    <!--Listado de asignaturas en las que está matriculado un alumno para crear tutoria-->
+    <bean id="masig" class="Asignatura"/>
+    <bean id="TutoriaAction_Get" class="TutoriaAction_Get">    
+        <property name="masig" ref="masig"/>
+    </bean>  
+    
+    <!--Crear tutoria 2 de 2-->
+    <bean id="tutodao" class="TutoriasDAO"/>
+    <bean id="TutoriaAction_Crear" class="TutoriaAction_Crear">    
+        <property name="tutodao" ref="tutodao"/>
+    </bean>  
+    
+    <!--Crear tutotira 1 de 2-->
+    <bean id="Tutoria" class="Tutoria"/>
+    <bean id="mituto" class="TutoriasList"/>
+    <bean id="TutoriasListAction" class="TutoriasListAction">    
+        <property name="mituto" ref="mituto"/>
+    </bean>  
+    
+    <!-- Marcar como leida una tutoría-->
+    <bean id="TutoriaAction_Leido" class="TutoriaAction_Leido">    
+        <property name="tutodao" ref="tutodao"/>
+    </bean>  
+    
+</beans>

@@ -1,0 +1,70 @@
+
+body {
+    text-align: center;
+    background-color:   cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../img/wallpaperAdmin.jpg");
+    background-size:cover;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: brown;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: brown;
+}
+
+
+form {
+    font-size: 15px;
+    display: inline-block;
+    background-color:   #282828;
+    text-align: center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    color:brown;
+}
+
+legend {
+    margin:0 auto;
+    font-weight:  bold;
+    font-size: 20px;
+    color: brown;
+}
+
+
+.blink_text {
+
+    animation:600s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+    color: red;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
