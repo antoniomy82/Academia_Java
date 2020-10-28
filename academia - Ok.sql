@@ -63,10 +63,10 @@ INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, ti
 		      VALUES ('12345678A','ADMIN','ADMIN','00000000','admin@admin.es','01/01/1970','Administrador','admin','admin');
 			  
 INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, nombre_usuario, password)
-		      VALUES ('45106365F','ANTONIO JAVIER','MORALES YAÑEZ','659379519','antoniomy82@gmail.com','11/01/1982','Profesor','antomy','antomy');
+		      VALUES ('45100065A','ANTONIO JAVIER','MORALES YAÑEZ','659123456','antoniom@gmail.com','11/01/1982','Profesor','antomy','antomy');
 			  
 INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, nombre_usuario, password)
-			  VALUES ('33957474B','MIGUEL ANGEL','CASTRO DE LA CUESTA','640656110','maccmaic@hotmail.com','01/09/1981','Profesor','maccmaic','maccmaic');
+			  VALUES ('33957474B','MIGUEL ANGEL','CASTRO DE LA CUESTA','640656110','maccic@hotmail.com','01/09/1981','Profesor','maccmaic','maccmaic');
 
 INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, nombre_usuario, password)
 			  VALUES ('0595747A','ADRIAN','MONTERO STALONE','630646110','culturistaAdri@hotmail.com','18/05/1980','Alumno','silveste','silveste');
@@ -78,7 +78,7 @@ INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, ti
 		      VALUES ('0000000B','root','root','00000000','root@root.com','01/01/1970','Administrador','root','root');
 			  
 INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, nombre_usuario, password)
-		      VALUES ('45108313S','LUISA','FERNANDEZ ALONSO','629309519','luisafdez@gmail.com','24/07/1983','Profesor','luisa83','luisa83');			  
+		      VALUES ('45328731A','LUISA','FERNANDEZ ALONSO','629309519','luisifdez@gmail.com','24/07/1983','Profesor','luisa83','luisa83');			  
 			  
 INSERT INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, nombre_usuario, password)
 			  VALUES ('13957474F','PEPE','CASTILLO MUÑOZ','640856110','pepecastillo@hotmail.com','01/10/1990','Alumno','pepeca','pepeca');
