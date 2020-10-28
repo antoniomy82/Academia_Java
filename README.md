@@ -16,7 +16,7 @@ Esta aplicación utiliza las siguientes tecnologías:
  - Servidor Apache Tomcat.
  - BBDD MySql Workbench.
 
-Puedes encontrar el script de creación de tablas y algunos inserts en el archivo "academia -Ok.sql", este script se deberá crear en nuestro server de SQL al crear el proyecto, sino, no se mostrará nada en la aplicación (como es lógico).
+Puedes encontrar el script de creación de tablas y algunos inserts en el archivo "academia -Ok.sql". Este script se deberá crear en nuestro server de SQL al crear el proyecto, sino, no se mostrará nada en la aplicación (como es lógico).
 
 Explicación de puesta en marcha, estructura y desarrollo en el siguiente vídeo.
 <https://drive.google.com/file/d/1Fhso4pqogGYKySYAyJcwLRX5zoLyVkTz/view?usp=sharing>
